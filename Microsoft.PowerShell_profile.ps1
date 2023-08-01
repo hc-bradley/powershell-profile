@@ -10,7 +10,8 @@ Import-Module -Name Terminal-Icons
 
 set-alias desktop "Desktop.ps1"
 
-oh-my-posh --init --shell pwsh --config C:\Users\henry\github\prompt\ohmyposhv3-v2.json | Invoke-Expression
+# oh-my-posh --init --shell pwsh --config C:\Users\henry\github\prompt\ohmyposhv3-v2.json | Invoke-Expression
+oh-my-posh init pwsh --config ~/ohmyposhv3-v2.json | Invoke-Expression
 
 
 Register-ArgumentCompleter -Native -CommandName winget -ScriptBlock {
@@ -658,5 +659,5 @@ Import-Module z
 # See https://ch0.co/tab-completion for details.
 $ChocolateyProfile = "$env:ChocolateyInstall\helpers\chocolateyProfile.psm1"
 if (Test-Path($ChocolateyProfile)) {
-  Import-Module "$ChocolateyProfile"
+    Import-Module "$ChocolateyProfile"
 }
